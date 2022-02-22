@@ -26,7 +26,7 @@ public class Pool {
     @Override
     public String toString() {
         return "Pool{" +'\n'+
-                "people=" + Arrays.toString(people) +
+                "people=" + Arrays.toString(people) +'\n'+
                 '}';
     }
 }
