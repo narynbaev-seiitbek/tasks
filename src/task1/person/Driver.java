@@ -5,26 +5,28 @@ import task1.person.Person;
 
 public class Driver extends Person implements CanDrive {
 
-    private String carModel;
+    private Car car;
 
     public Driver() {
     }
 
-    public Driver(String carModel) {
-        this.carModel = carModel;
-    }
 
-    public Driver(String name, int age, String carModel) {
+    public Driver(String name, int age) {
         super(name, age);
-        this.carModel = carModel;
+
     }
 
-    public String getCarModel() {
-        return carModel;
+    public Car getCar() {
+        return car;
     }
 
-    public void setCarModel(String carModel) {
-        this.carModel = carModel;
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    @Override
+    public void buyACar(Car car) {
+        this.car = car;
     }
 
     @Override
@@ -39,8 +41,8 @@ public class Driver extends Person implements CanDrive {
 
     @Override
     public String toString() {
-        return "Driver{" +
-                "carModel='" + carModel + '\'' +
-                "} " + super.toString();
+        return "Driver: " +'\n'+
+                "car: " + car +'\n'+
+                 super.toString();
     }
 }

@@ -6,27 +6,26 @@ import java.util.Arrays;
 
 public class Pool {
 
-    Person[] people;
+    Swimmable[] people;
 
     public Pool() {
     }
 
-    public Pool(Person[] people) {
+    public Pool(Swimmable[] people) {
         this.people = people;
     }
 
-    public Person[] getPeople() {
+    public Swimmable[] getPeople() {
         return people;
     }
 
-    public void setPeople(Person[] people) {
+    public void setPeople(Swimmable[] people) {
         this.people = people;
     }
 
     @Override
     public String toString() {
-        return "Pool{" +'\n'+
-                "people=" + Arrays.toString(people) +'\n'+
-                '}';
+        return "Pool information:" +'\n'+
+                "people=" + Arrays.toString(people)+'\n';
     }
 }

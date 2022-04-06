@@ -7,6 +7,7 @@ import task1.person.Person;
 public class Programmer extends Person implements Swimmable, CanDrive {
 
     private String programmingLanguage;
+    private Car car;
 
     public Programmer() {
     }
@@ -29,6 +30,11 @@ public class Programmer extends Person implements Swimmable, CanDrive {
     }
 
     @Override
+    public void buyACar(Car car) {
+      this.car = car;
+    }
+
+    @Override
     void eat() {
         System.out.println("Programmer is eating");
     }
@@ -47,6 +53,7 @@ public class Programmer extends Person implements Swimmable, CanDrive {
     public String toString() {
         return "Programmer{" +
                 "programmingLanguage='" + programmingLanguage + '\'' +
+                ", car=" + car +
                 "} " + super.toString();
     }
 }
